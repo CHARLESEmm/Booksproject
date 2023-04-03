@@ -1,0 +1,177 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.pesentation_section
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-image: url(assets/bookscover.png);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+   
+
+}
+    .contenu
+    {
+        width: 600px;
+        height: 100px;  
+        display: flex; 
+        justify-content: center;
+        
+        
+        
+    }
+        h1
+        {
+            color: blue;
+            font-size: 36pt;
+        }
+        .bouttonlogin
+        {
+            margin-top: 4%;
+            position: absolute;
+        }
+            .bouttonlogin h3
+            {
+                font-size: 24pt;
+                border-bottom: 1px solid rgba(199, 2, 2, 0);
+            }
+            .bouttonlogin a
+            {
+                text-decoration: none;
+                color: rgb(126, 121, 121);
+                
+            }
+            .bouttonlogin h3:hover
+            {
+                border-bottom: 1px solid rgb(199, 2, 2);
+                transition: 2s;
+            }
+
+
+
+
+.resgister
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.registerbox
+{
+    width: 700px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    
+    
+}
+
+.registercountent
+{
+    width: 450px;
+    height: 250px;
+    border: 1px solid rgb(63, 63, 62);
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+    #sizeinput
+    {
+        width: 400px;
+        height: 20px;
+    }
+
+.box-resgister-sign
+{
+    width: 480px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    
+}
+
+button
+{
+    background-color: #AACDE9;
+    border:1px solid gray;
+    cursor: pointer;
+}
+
+.bouton-sign_register
+{
+    width: 250px;
+    color: rgb(56, 55, 55)
+    
+}
+#button_sign:hover
+{
+color: rgb(11, 11, 11);
+
+}
+
+.messageerror
+{
+    margin-top: 2%;
+}
+
+.title
+{
+    margin-bottom: 1%;
+    color:#5E5E5E ;
+}
+
+#bouttonregister
+{
+    width: 50px;
+    padding: 2px;
+    background-color: #4dbb8a;
+    border-radius: 5px;
+    color: rgb(245, 241, 241);
+    border: none;
+    cursor: pointer;
+}
+
+#bouttonregisterregistration
+{
+    margin-top: 2%;
+    width: 50px;
+    padding: 2px;
+    background-color: #4dbb8a;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+
+#bouttonregisterregistrationupload
+{
+    background-color: #4dbb8a;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
