@@ -74,25 +74,26 @@ if (isset($_POST['deconnexion'])) {
                     
                 
                 </div>
+        <div class="titre">
         <h2>Gestion d'articles</h2>
+        </div>
+        <div class="formbox">
             <form action="" method="post" class="gestionarticlesform">
             <label for="title">Title</label><br>
             <input type="text" id="sizeinput" name="title">
-            
-            <label for="author">Author</label>
+             <br>
+            <label for="author">Author</label><br>
             <input type="text" id="sizeinput" name="author"><br><br>
             
             <label for="summary">Summary</label>
-            <textarea id="story" name="summary"
-                rows="5" cols="33">
-                    It was a dark and stormy night...
-                </textarea><br><br>
-
-            
+            <br>
+            <textarea  id="story" name="summary"
+                rows="10" cols="33"> </textarea><br><br>
             <label for="price">Price</label>
+            <br>
             <input type="text" id="sizeinput" name="price"><br><br>
             
-            <label for="posteradd">Poster</label>
+            <label for="posteradd">Poster</label><br>
             <input type="file" id="sizeinput" name="photo" placeholder="add photo"><br><br>
             
             <input type="submit" value="add">
@@ -108,7 +109,7 @@ if (isset($_POST['deconnexion'])) {
                         ?>
                     </div>
         </form>
-
+        </div>
         
         </div>
 </div>
