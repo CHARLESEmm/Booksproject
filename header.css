@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    width: 100%;
+   
+}
+
+.blockGlobal
+{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: end;
+}
+
+.blockContenair
+{
+ width: 60%;
+ height: 100px;
+
+ display: flex;
+}
+
+.title
+{
+    width: 33%;
+    height: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  
+
+}
+
+.title h1
+{
+    font-size: 75px;
+    color: rgb(26, 137, 241);
+}
+
+.search
+{
+    width: 33%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+input
+{
+    border-top: none;
+    border-right: none;
+
+}
+
+img
+{
+    width: 30px;
+    height: 30px;
+    margin-top: 2%;
+}
+
+button
+{
+    background-color: white;
+    border: none;
+}
+
+.avatar
+{
+    width: 13%;
+    height: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    margin-left: 20%;
+}
+
+
+
+section
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+a
+{
+    text-decoration: none;
+    font-style: bold;
+    color: black;
+    border-bottom: white;
+}
+
+a:hover
+{
+    border-bottom: rgb(10, 10, 10);
+}

@@ -13,27 +13,26 @@ $allbooks = $conn->query($sql);
     <title>Document</title>
 </head>
 
-<div class="tete">
-<?php  
-require_once 'header.php';
-?>
-</div>
-
 <body>
-    <main>
-        <?php
-          foreach ($allbooks as $row) {
+    <div class="tete">
+        <?php  
+        require_once 'header.php';
         ?>
+    </div>
+
+    <main>
+        <?php foreach ($allbooks as $row): ?>
         <div class="card">
             <div class="image">
-                <img src="<?php echo $row['poster'];?>" alt="" srcset="">
+                <img src="<?php echo $row['poster']; ?>" alt="" srcset="">
             </div>
-            <p class="nomproduit"><?php echo $row['title'];?></p>
+            <p class="nomproduit"><?php echo $row['title']; ?></p>
         </div>
-        <?php
-          }
-        ?>
+        <?php endforeach; ?>
     </main>
 </body>
+<?php  
+    require_once 'footer.php';
+?>
 
 </html>
