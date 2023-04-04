@@ -6,28 +6,28 @@ session_start();
 // Connexion à la base de données
 $conn = new PDO('mysql:host=localhost;dbname=books;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-// Vérification de la soumission du formulaire
-if (isset($_POST['sing'])) {
-    // Récupération des données de l'utilisateur à partir du formulaire
-    $username = $_POST['user'];
-    $password = sha1($_POST['password']); // Utilisation de sha1 pour hasher le mot de passe
 
-    // Vérification que les champs ne sont pas vides
+if (isset($_POST['sing'])) {
+    
+    $username = $_POST['user'];
+    $password = sha1($_POST['password']); 
+
+    
     if(!empty($username) AND !empty($password)) {
-        // Préparation de la requête pour récupérer l'utilisateur correspondant aux identifiants saisis
+        
         $recupUser = $conn->prepare('SELECT * FROM users WHERE username = ? AND password = ?');
-        // Exécution de la requête avec les paramètres saisis
+        
         $recupUser->execute(array($username, $password));
 
-        // Vérification si un utilisateur correspondant a été trouvé
+        
         if($recupUser->rowCount() > 0) {
             // Stockage des informations de l'utilisateur dans la session
             $_SESSION['user'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['id'] = $recupUser->fetch()['id'];
 
-            // Redirection vers la page index.php
-            header('Location: Acceuil.php');
+          
+            header('Location: home.php');
         } else {
             // Message d'erreur si les identifiants sont incorrects
             $erreur = "Pseudo ou mot de passe invalide !";

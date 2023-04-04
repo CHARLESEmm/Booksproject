@@ -12,8 +12,14 @@ $allbooks = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<div class="tete">
+<?php  
+require_once 'header.php';
+?>
+</div>
+
 <body>
-   
     <main>
         <?php
           foreach ($allbooks as $row) {
@@ -29,7 +35,5 @@ $allbooks = $conn->query($sql);
         ?>
     </main>
 </body>
-<?php  
-require_once 'footer.php';
-?>
+
 </html>
