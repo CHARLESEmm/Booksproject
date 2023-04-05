@@ -22,7 +22,7 @@ if (isset($_POST['sing'])) {
         // Vérification si un utilisateur correspondant a été trouvé
         if($recupUser->rowCount() > 0) {
             // Stockage des informations de l'utilisateur dans la session
-            $_SESSION['admin'] = $adminame;
+            $_SESSION['adminname'] = $adminame;
             $_SESSION['password'] = $password;
             $_SESSION['id'] = $recupUser->fetch()['id'];
 

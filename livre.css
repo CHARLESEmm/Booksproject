@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+.box
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.contenair
+{
+    width: 800px;
+    height: 600px;
+   /*border: 1px solid red;*/
+    margin-top: 1%;
+    display: flex;
+    margin-left: 5%;
+}
+
+.image
+{
+    width: 400px;
+    height: 500px;
+    /*border: 1px solid yellow;*/
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.image img 
+{
+    width: 400px;
+    height: 500px;
+}
+
+.boxinfo
+{
+    width: 200px;
+    height: 500px; 
+    /*border: 1px solid green;*/
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.stars .rate
+{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(7, 7, 7);
+
+}
+
+
+
+
+.readme
+{
+    width: 50%;
+    height: 600px;
+    /*border: 1px solid yellow;;*/
+    margin-top: 1%;
+}
+
+.summ
+{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+

@@ -14,11 +14,9 @@ $allbooks = $conn->query($sql);
 </head>
 
 <body>
-    <div class="tete">
-        <?php  
+    <?php  
         require_once 'header.php';
-        ?>
-    </div>
+    ?>
 
     <main>
         <?php foreach ($allbooks as $row): ?>
@@ -30,9 +28,10 @@ $allbooks = $conn->query($sql);
         </div>
         <?php endforeach; ?>
     </main>
-</body>
-<?php  
-    require_once 'footer.php';
-?>
 
+    <?php  
+        require_once 'footer.php';
+    ?>
+</body>
 </html>
+

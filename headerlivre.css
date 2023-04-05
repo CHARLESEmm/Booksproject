@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.blockheader
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 1%;
+}
+
+.title
+{
+    margin-left: 5%;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.useravatar
+{
+    margin-right: 5%;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+
+}
+
+h4
+{
+    font-size: 65px;
+    color: rgb(57, 149, 224);
+}

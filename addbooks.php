@@ -1,5 +1,8 @@
 <?php
-$conn = new PDO('mysql:host=localhost;dbname=books;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+ require_once 'connect.php';
+?>
+
+<?php
 
 if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['summary']) && isset($_POST['price']) && isset($_POST['photo'])) {
     $title = $_POST['title'];
@@ -20,14 +23,14 @@ if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['summary']
 }
 
 session_start();
-if (!isset($_SESSION['id']) || !isset($_SESSION['admin'])) {
+if (!isset($_SESSION['id']) || !isset($_SESSION['adminname'])) {
     // Ajouter une action si l'utilisateur n'est pas connecté
     echo "";
 }
 
 if (isset($_POST['deconnexion'])) {
     unset($_SESSION['id']);
-    unset($_SESSION['admin']);
+    unset($_SESSION['adminname']);
 
     // Redirigez l'utilisateur vers la page de connexion
     
@@ -70,7 +73,7 @@ if (isset($_POST['deconnexion'])) {
         <div class="formulaire">
                 <div class="boxcontenairadminprofil">
                     <div class="image_admin"><img src="assets/avatar.png" alt="" srcset=""></div>
-                    <div class="adminname"><?php echo isset($_SESSION['admin']) ? $_SESSION['admin'] : ''; ?></div>
+                    <div class="adminname"><?php echo isset($_SESSION['adminname']) ? $_SESSION['adminname'] : ''; ?></div>
                     
                 
                 </div>
