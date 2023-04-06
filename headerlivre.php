@@ -9,7 +9,7 @@
 </head>
 <header>
     <div class="blockheader">
-        <div class="title"><h4>B</h4></div>
+        <div class="title"><a href="home.php"><h4>B</h4></a></div>
         <div class="useravatar">
             <img src="assets/avatar.png" alt="">
 

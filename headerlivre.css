@@ -37,3 +37,8 @@ h4
     font-size: 65px;
     color: rgb(57, 149, 224);
 }
+
+a
+{
+    text-decoration: none;
+}
