@@ -1,3 +1,13 @@
+<?php
+require_once "connect.php";
+session_start();
+
+if (!isset($_SESSION['id']) || !isset($_SESSION['user'])) {
+    echo "";
+} 
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +22,13 @@
         <div class="title"><a href="home.php"><h4>B</h4></a></div>
         <div class="useravatar">
             <img src="assets/avatar.png" alt="">
+            <div class="avatarname"><p><?php echo isset($_SESSION['user']) ? $_SESSION['user'] : ''; ?></p></div>
 
+        </div>
     </div>
 </header>
 <body>
     
 </body>
 </html>
+

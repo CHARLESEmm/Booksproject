@@ -15,7 +15,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+
+</body>
+<footer>
+        
     <footer style="background-color: black; color: white; height: 300px; width: 100%;margin-top:8%;">
         <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
             <div style="flex: 1;">
@@ -43,8 +47,7 @@
             <p style="display: inline;">Téléphone : 01 78 45 78 45</p>
         </div>
     </footer>
-
-</body>
+</footer>
 </html>
 
 </html>

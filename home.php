@@ -32,11 +32,11 @@ $allbooks = $conn->query($sql);
     <?php endforeach; ?>
 </main>
 
-<?php  
-    require_once 'footer.php';
-?>
 
     
 </body>
+<?php  
+    require_once 'footer.php';
+?>
 </html>
 
