@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box_footer
+{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    position: fixed;
+}
+
+.info1
+{
+    width: 33%;
+    height: 300px;
+    color: white;
+    align-items: center;
+    display: flex;
+    margin-left: 5%;
+
+}
+
+.info2
+{
+    width: 33%;
+    height: 300px;
+    color: white;
+    align-items: center;
+    display: flex;
+
+}
+
+.info3
+{
+    width: 33%;
+    height: 300px;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    margin-right: 5%;
+
+}
