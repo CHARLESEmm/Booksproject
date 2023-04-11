@@ -21,8 +21,8 @@ header
 {
  width: 60%;
  height: 100px;
-
  display: flex;
+ justify-content: end;
 }
 
 .title
@@ -44,7 +44,7 @@ header
 
 .search
 {
-    width: 33%;
+    width: 45%;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -72,15 +72,46 @@ button
     border: none;
 }
 
-.avatar
+.useravatar
 {
-    width: 13%;
-    height: 100px;
+    margin-right: 5%;
+    width: 20%;
+    height: 50px;
     display: flex;
-    justify-content: start;
     align-items: center;
+    cursor: pointer;
+    
 
-    margin-left: 20%;
+}
+
+.avatarname
+{
+    
+    margin-top: 2%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.deco
+{
+    margin-top: 2%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+
+}
+
+#deconnect
+{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    
 }
 
 

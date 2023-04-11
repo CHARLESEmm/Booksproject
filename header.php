@@ -5,6 +5,13 @@ session_start();
 if (!isset($_SESSION['id']) || !isset($_SESSION['user'])) {
     echo "";
 } 
+
+if (isset($_POST['deconnexion'])) {
+    unset($_SESSION['id']);
+    header('Location: login.php');
+    $erreur = "Vous avez bien été déconnecté de votre session admin";
+    exit;
+}
 ?>
 
 
@@ -29,10 +36,18 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['user'])) {
                     <button type="submit" name="Rechercher"><img src="assets/chercher.png" alt=""></button>
                 </form>
             </div>
-            <div class="avatar">
-                <img src="assets/avatar.png" alt="">
-                <div class="test"><p><?php echo isset($_SESSION['user']) ? $_SESSION['user'] : ''; ?></p></div>
-          
+            <div class="useravatar">
+                <img src="assets/avatar.png" alt="" srcset="">
+                <div class="avatarname"><p><?php echo isset($_SESSION['user']) ? $_SESSION['user'] : ''; ?></p> </div>
+                <div class="deco">
+                        <form class="deconnect" method="POST">
+                            <div class="imagedeco">
+                                <button type="submit" name="deconnexion" id="deconnect" alt="deconnect">
+                                    <img src="assets/connexion.png" alt="Bouton de déconnexion">
+                                </button>
+                            </div>
+                        </form>
+                </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <?php
 require_once 'connect.php';
-$sql = "SELECT * FROM `book`";
+$sql = "SELECT * FROM book ORDER BY title DESC";
 $allbooks = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ $allbooks = $conn->query($sql);
     <title>Document</title>
 </head>
 
-<body>
+
  <?php  
     require_once 'header.php';
 ?>
@@ -33,8 +33,6 @@ $allbooks = $conn->query($sql);
 </main>
 
 
-    
-</body>
 <?php  
     require_once 'footer.php';
 ?>

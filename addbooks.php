@@ -1,6 +1,8 @@
 <?php
 require_once 'connect.php';
 
+$erreur;
+
 if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['summary']) && isset($_POST['details']) && isset($_POST['price']) && isset($_POST['photo'])) {
     $title = $_POST['title'];
     $author = $_POST['author'];
@@ -27,7 +29,6 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['adminname'])) {
 
 if (isset($_POST['deconnexion'])) {
     unset($_SESSION['id']);
-    unset($_SESSION['adminname']);
     header('Location: login_admin.php');
     $erreur = "Vous avez bien été déconnecté de votre session admin";
     exit;
@@ -94,7 +95,7 @@ if (isset($_POST['deconnexion'])) {
             <input type="submit" value="add" id="boutton_add">
             <div class="messageerror">
                         <?php
-                            if(isset($_POST['sing']) AND isset($erreur))
+                            if (isset($erreur))
                             {
                                 echo '<font color="orange">' .$erreur."</font>";
                                 exit();
