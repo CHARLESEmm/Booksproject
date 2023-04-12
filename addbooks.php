@@ -54,6 +54,7 @@ if (isset($_POST['deconnexion'])) {
             <div class="bouton">
                 <div class="gestionarticle"><a href="">Gestion d'articles</a></div>
                 <div class="gestionventes"><a href="">Gestion de ventes</a></div>
+                <div class="gestionventes"><a href="home.php">Voir le site</a></div>
                 <div class="boxdeco">
                     <form class="deconect" method="POST">
                         <input type="submit" name="deconnexion" id="deconnect" value="Déconnexion">

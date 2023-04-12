@@ -6,6 +6,10 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['user'])) {
     echo "";
 } 
 
+if (!isset($_SESSION['id']) || !isset($_SESSION['adminname'])) {
+    echo "";
+}
+
 if (isset($_POST['deconnexion'])) {
     unset($_SESSION['id']);
     header('Location: login.php');
@@ -32,7 +36,7 @@ if (isset($_POST['deconnexion'])) {
         <div class="blockContenair">
             <div class="useravatar">
                 <img src="assets/avatar.png" alt="" srcset="">
-                <div class="avatarname"><p><?php echo isset($_SESSION['user']) ? $_SESSION['user'] : ''; ?></p> </div>
+                <div class="avatarname"><p><?php echo isset($_SESSION['user']) ? $_SESSION['user'] : ''; ?><?php echo isset($_SESSION['adminname']) ? $_SESSION['adminname'] : ''; ?></p> </div>
                 <div class="deco">
                         <form class="deconnect" method="POST">
                             <div class="imagedeco">
