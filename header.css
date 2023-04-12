@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 header
@@ -136,4 +137,61 @@ a
 a:hover
 {
     border-bottom: rgb(10, 10, 10);
+}
+
+/*------------*/
+/*slide categories */
+
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+   
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin-left: 6.5%;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+nav ul li:hover ul {
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+
+nav ul li ul li {
+    display: block;
+}
+
+nav ul li ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #333;
 }

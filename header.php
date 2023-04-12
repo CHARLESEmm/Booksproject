@@ -21,6 +21,7 @@ if (isset($_POST['deconnexion'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="header.css">
     <title>Document</title>
 </head>
@@ -42,32 +43,30 @@ if (isset($_POST['deconnexion'])) {
                 <div class="deco">
                         <form class="deconnect" method="POST">
                             <div class="imagedeco">
-                                <button type="submit" name="deconnexion" id="deconnect" alt="deconnect">
+                             <button type="submit" name="deconnexion" id="deconnect" alt="deconnect">
                                     <img src="assets/connexion.png" alt="Bouton de déconnexion">
-                                </button>
-                            </div>
-                        </form>
-                </div>
+                              </button>
+                           </div>
+                       </form>
+              </div>
             </div>
         </div>
     </div>
-</header>
 
-</header>
-</body>
-</html>
-
-</header>
-</body>
-</html>
-
- 
- <section>
-    <a href="#">Categories</a>
-    <a href="favories.php">Favories</a>
-    <a href="#">Livres</a>
-    <a href="#">Contact</a>
-</section>
+    <nav>
+        <ul>
+            <li>
+                <a href="">Categories</a>
+                <ul>
+                    <li><a href="#">Science fiction</a></li>
+                    <li><a href="#">Roman</a></li>
+                    <li><a href="#">Historique</a></li>
+                </ul>
+            </li>
+            <li><a href="home.php">Livres</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 </body>
 </html>

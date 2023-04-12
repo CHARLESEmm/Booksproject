@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
+<?php 
         require_once 'connect.php';
         require_once 'headerlivre.php';
         $error = "";
@@ -28,7 +28,23 @@
         } else {
             $error =  "An error occurred";
         }
-    ?>
+
+       
+?>
+<?php
+    if (isset($_POST['addtofavorites'])) 
+    {
+
+        $sql = "INSERT INTO `favorites`(`id_fav`, `id_book_fav`, `id_users`) VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        
+     
+    }
+
+       
+?>
+
+
 
     <div class="box">
         <div class="contenair">
@@ -36,9 +52,9 @@
                 <img src="<?php echo $image; ?>" alt="">
             </div>
             <div class="boxinfo">
-                <button class="favories">
-                    ADD TO
-                </button>
+            <form action="" method="post">
+                <input type="submit" name="addtofavorites" value="Add to favorites">
+            </form>
                 <div class="stars">
                     <div class="rate">
                         <i class="fa-solid fa-star fa-2xl"></i>
