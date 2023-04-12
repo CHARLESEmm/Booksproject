@@ -1,5 +1,6 @@
 <?php
 require_once "connect.php";
+require_once 'seachengine.php';
 session_start();
 
 if (!isset($_SESSION['id']) || !isset($_SESSION['user'])) {

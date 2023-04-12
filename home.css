@@ -51,3 +51,12 @@ main .card .nomproduit {
 }
 
 
+.message
+{
+    width: 300px;
+    height: 500px;
+    color: rgb(45, 131, 230);
+    margin-left: 2%;
+    margin-top: 2%;
+}
+

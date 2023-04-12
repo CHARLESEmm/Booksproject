@@ -1,8 +1,23 @@
 <?php
 require_once 'connect.php';
+
+// Recherche de livres
+$searchResults = null;
+if (isset($_POST['motcle'])) {
+    $recherche = $_POST['motcle']; 
+    $selection = "SELECT * FROM `book` WHERE title LIKE '%$recherche%' OR author LIKE '%$recherche%'";
+    $resultat = $conn->query($selection);
+    if ($resultat && $resultat->rowCount() > 0) {
+        $searchResults = $resultat;
+    }
+}
+
+// Affichage des livres
 $sql = "SELECT * FROM book ORDER BY title DESC";
 $allbooks = $conn->query($sql);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,28 +28,43 @@ $allbooks = $conn->query($sql);
     <title>Document</title>
 </head>
 
-
- <?php  
+<?php  
     require_once 'header.php';
 ?>
 
 <main>
-    <?php foreach ($allbooks as $row): ?>
+    <?php if ($searchResults): ?>
+    <?php foreach ($searchResults as $row): ?>
     <div class="card">
         <div class="image">
-        <a href="livre.php?book_id=<?php echo $row['book_id']; ?>&image=<?php echo $row['poster']; ?>&title=<?php echo $row['title']; ?>&author=<?php echo $row['author']; ?>&details=<?php echo $row['details']; ?>">
+            <a href="livre.php?book_id=<?php echo $row['book_id']; ?>&image=<?php echo $row['poster']; ?>&title=<?php echo $row['title']; ?>&author=<?php echo $row['author']; ?>&details=<?php echo $row['details']; ?>">
                 <img src="<?php echo $row['poster']; ?>" alt="" srcset="">
-        </a>
-
+            </a>
         </div>
         <p class="nomproduit"><?php echo $row['title']; ?></p>
     </div>
     <?php endforeach; ?>
+    <?php elseif (isset($_POST['motcle'])): ?>
+    
+    <div class="message"> <?php $erreur = "<p>Aucun résultat trouvé pour \"" . $_POST['motcle'] . "\"</p>"; ?>   
+    <?php echo $erreur; ?>
+   
+    <?php else: ?>
+        </div>
+    <?php foreach ($allbooks as $row): ?>
+    <div class="card">
+        <div class="image">
+            <a href="livre.php?book_id=<?php echo $row['book_id']; ?>&image=<?php echo $row['poster']; ?>&title=<?php echo $row['title']; ?>&author=<?php echo $row['author']; ?>&details=<?php echo $row['details']; ?>">
+                <img src="<?php echo $row['poster']; ?>" alt="" srcset="">
+            </a>
+        </div>
+        <p class="nomproduit"><?php echo $row['title']; ?></p>
+    </div>
+    <?php endforeach; ?>
+    <?php endif; ?>
 </main>
 
 
 <?php  
     require_once 'footer.php';
 ?>
-</html>
-
