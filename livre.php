@@ -25,24 +25,14 @@
             $image = $row['poster'];
             $title = $row['title'];
             $author = $row['author'];
+            $link = $row['link'];
         } else {
             $error =  "An error occurred";
         }
 
        
 ?>
-<?php
-    if (isset($_POST['addtofavorites'])) 
-    {
 
-        $sql = "INSERT INTO `favorites`(`id_fav`, `id_book_fav`, `id_users`) VALUES (?, ?, ?)";
-        $stmt = $conn->prepare($sql);
-        
-     
-    }
-
-       
-?>
 
 
 
@@ -52,21 +42,12 @@
                 <img src="<?php echo $image; ?>" alt="">
             </div>
             <div class="boxinfo">
-            <form action="" method="post">
-                <input type="submit" name="addtofavorites" value="Add to favorites">
-            </form>
-                <div class="stars">
-                    <div class="rate">
-                        <i class="fa-solid fa-star fa-2xl"></i>
-                        <i class="fa-solid fa-star fa-2xl"></i>
-                        <i class="fa-solid fa-star fa-2xl"></i>
-                        <i class="fa-solid fa-star fa-2xl"></i>
-                        <i class="fa-solid fa-star fa-2xl"></i>
-                    </div>
-                </div>
+            
+            <a href="<?php echo $link; ?>" download>
                 <button class="favories">
-                    Download
+                    Télécharger
                 </button>
+            </a>
             </div>
         </div>
         <div class="readme">

@@ -3,17 +3,18 @@ require_once 'connect.php';
 
 $erreur;
 
-if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['summary']) && isset($_POST['details']) && isset($_POST['price']) && isset($_POST['photo'])) {
+if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['summary']) && isset($_POST['details']) && isset($_POST['price']) && isset($_POST['photo']) && isset($_POST['link'])) {
     $title = $_POST['title'];
     $author = $_POST['author'];
     $summary = $_POST['summary'];
     $details = $_POST['details'];
     $price = $_POST['price'];
     $photo = $_POST['photo'];
+    $link = $_POST['link'];
 
-    if (!empty($title) && !empty($author) && !empty($summary) && !empty($details) && !empty($price)) {
-        $stmt = $conn->prepare('INSERT INTO book(title, author, summary, details, price, poster) VALUES (?, ?, ?, ?, ?, ?)');
-        $stmt->execute(array($title, $author, $summary, $details, $price, $photo));
+    if (!empty($title) && !empty($author) && !empty($summary) && !empty($details) && !empty($price) && !empty($photo) && !empty($link)) {
+        $stmt = $conn->prepare('INSERT INTO book(title, author, summary, details, price, poster,link) VALUES (?, ?, ?, ?, ?, ?,?)');
+        $stmt->execute(array($title, $author, $summary, $details, $price, $photo,$link));
         $erreur = "Votre article a bien été enregistré";
     } else {
         $erreur = "Veuillez remplir tous les champs.";
@@ -92,7 +93,9 @@ if (isset($_POST['deconnexion'])) {
             <label for="posteradd">Poster </label><br>
             
             <input type="text" id="sizeinput" name="photo" placeholder="assets/filename.png"><br><br>
-            
+
+            <label for="link">link</label>
+            <input type="text" id="sizeinput" name="link" placeholder="livres/title.epub or pdf"><br><br>
             <input type="submit" value="add" id="boutton_add">
             <div class="messageerror">
                         <?php

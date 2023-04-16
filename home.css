@@ -2,16 +2,19 @@
     padding: 0;
     margin: 0;
     
+    
 }
 
 main {
-    max-width: 1500px;
-    width: 100%;
+    
+    width: 94%;
     margin-left: 5%;
     display: flex;
     flex-wrap: wrap;
     height: auto;
     gap: 4%;
+   
+    
 }
 
 main .card {
@@ -20,6 +23,7 @@ main .card {
     text-align: center;
     height: 260px;
     margin: 1%;
+    
 
 
     
