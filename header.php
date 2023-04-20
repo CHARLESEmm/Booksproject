@@ -69,7 +69,7 @@ if (isset($_POST['deconnexion'])) {
                 </ul>
             </li>
             <li><a href="home.php">Livres</a></li>
-            <li><a href="#">Contact</a></li>
+            
         </ul>
     </nav>
 </header>

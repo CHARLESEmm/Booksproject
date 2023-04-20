@@ -4,7 +4,7 @@
 session_start();
 
 // Connexion à la base de données
-$conn = new PDO('mysql:host=localhost;dbname=books;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+require_once 'connect.php';
 
 
 if (isset($_POST['sing'])) {
@@ -15,7 +15,7 @@ if (isset($_POST['sing'])) {
     
     if(!empty($username) AND !empty($password)) {
         
-        $recupUser = $conn->prepare('SELECT * FROM users WHERE username = ? AND password = ?');
+        $recupUser = $conn->prepare('SELECT * FROM ec_users WHERE username = ? AND password = ?');
         
         $recupUser->execute(array($username, $password));
 

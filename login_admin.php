@@ -19,7 +19,7 @@ if (isset($_POST['sing'])) {
     // Vérification que les champs ne sont pas vides
     if(!empty($adminame) AND !empty($password)) {
         
-        $recupUser = $conn->prepare('SELECT * FROM admin WHERE adminname = ? AND password = ?');
+        $recupUser = $conn->prepare('SELECT * FROM ec_admin WHERE adminname = ? AND password = ?');
         
         $recupUser->execute(array($adminame, $password));
 

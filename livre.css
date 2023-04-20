@@ -25,18 +25,18 @@
 .image
 {
     width: 400px;
-    height: 500px;
-    /*border: 1px solid yellow;*/
+    height: 550px;
+    
     display: flex;
     flex-direction: column;
-    
+    box-shadow: 5px 5px 5px rgb(179, 176, 176);
     
 }
 
 .image img 
 {
     width: 400px;
-    height: 500px;
+    height: 550px;
 }
 
 .boxinfo

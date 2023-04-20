@@ -1,27 +1,70 @@
 <?php
+// Inclusion du fichier de connexion à la base de données
 require_once 'connect.php';
 
-$erreur;
+// Initialisation de la variable d'erreur
+$erreur = '';
 
-if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['summary']) && isset($_POST['details']) && isset($_POST['price']) && isset($_POST['photo']) && isset($_POST['link'])) {
+
+      
+
+if (isset($_POST['addbooks'])) {
+
     $title = $_POST['title'];
     $author = $_POST['author'];
     $summary = $_POST['summary'];
     $details = $_POST['details'];
     $price = $_POST['price'];
-    $photo = $_POST['photo'];
-    $link = $_POST['link'];
+    $link = NULL;
+    $poster = NULL;
 
-    if (!empty($title) && !empty($author) && !empty($summary) && !empty($details) && !empty($price) && !empty($photo) && !empty($link)) {
-        $stmt = $conn->prepare('INSERT INTO book(title, author, summary, details, price, poster,link) VALUES (?, ?, ?, ?, ?, ?,?)');
-        $stmt->execute(array($title, $author, $summary, $details, $price, $photo,$link));
-        $erreur = "Votre article a bien été enregistré";
+    if (isset($_FILES['photo']) && getimagesize($_FILES['photo']['tmp_name'])) {
+        $target_dir = 'upload/';
+        $target_file = $target_dir . uniqid() . basename($_FILES['photo']['name']);
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        if (!in_array($imageFileType, array('jpg', 'jpeg', 'png'))) {
+            $erreur = 'Le fichier doit être au format JPG, JPEG ou PNG.';
+        } else {
+            if (!move_uploaded_file($_FILES['photo']['tmp_name'], $target_file)) {
+                $erreur = 'Erreur lors du téléchargement de l\'image.';
+            } else {
+                $poster = $target_file;
+            }
+        }
     } else {
-        $erreur = "Veuillez remplir tous les champs.";
+        $erreur = 'Veuillez sélectionner une image.';
     }
+
+    if (isset($_FILES['link']) && $_FILES['link']['error'] == UPLOAD_ERR_OK) {
+        $target_dir = 'livrestest/';
+        $target_file = $target_dir . uniqid() . basename($_FILES['link']['name']);
+        $file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        if (!in_array($file_type, array('pdf', 'epub'))) {
+            $erreur = 'Le fichier doit être au format PDF ou EPUB.';
+        } else {
+            if (move_uploaded_file($_FILES['link']['tmp_name'], $target_file)) {
+                $link = $target_file;
+            } else {
+                $erreur = 'Erreur lors du téléchargement du fichier.';
+            }
+        }
+    } else {
+        $erreur = 'Veuillez sélectionner un fichier.';
+    }
+
+    if ($erreur == NULL) {
+        // Insertion en base de données
+        $stmt = $conn->prepare('INSERT INTO ec_book(title, author, summary, details, price, poster, link) VALUES (?, ?, ?, ?, ?, ?, ?)');
+        $stmt->execute(array($title, $author, $summary, $details, $price, $poster, $link));
+        $erreur = 'Votre livre a bien été ajouté.';
+    }
+
 } else {
-    $erreur = "Formulaire non soumis.";
+    $erreur = 'Formulaire non soumis.';
 }
+
 
 session_start();
 if (!isset($_SESSION['id']) || !isset($_SESSION['adminname'])) {
@@ -44,7 +87,7 @@ if (isset($_POST['deconnexion'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="addbooks.css">
-    <title>Document</title>
+    <title>Add books</title>
 </head>
 <body>
     <div class="contenairarticles">
@@ -72,7 +115,7 @@ if (isset($_POST['deconnexion'])) {
                 <h2>Gestion d'articles</h2>
             </div>
         <div class="formbox">
-            <form action="" method="post" class="gestionarticlesform">
+            <form action="" method="post" class="gestionarticlesform" enctype="multipart/form-data">
             <label for="title">Title</label><br>
             <input type="text" id="sizeinput" name="title">
              <br>
@@ -90,13 +133,14 @@ if (isset($_POST['deconnexion'])) {
             <label for="price">Price</label>
             <br>
             <input type="text" id="sizeinput" name="price"><br>
-            <label for="posteradd">Poster </label><br>
-            
-            <input type="text" id="sizeinput" name="photo" placeholder="assets/filename.png"><br><br>
 
+            <label for="posteradd">Poster </label><br>
+            <input type="file" id="sizeinput" name="photo" placeholder="emplacement du ficher/filename.png" accept="image/png,image/jpeg,image/jpg"><br><br>
+           
             <label for="link">link</label>
-            <input type="text" id="sizeinput" name="link" placeholder="livres/title.epub or pdf"><br><br>
-            <input type="submit" value="add" id="boutton_add">
+            <input type="file" id="sizeinput" name="link" placeholder="emplacement du ficher/title.epub or pdf" accept="application/pdf,application/epub+zip" ><br><br>
+            <input type="submit" value="add" id="boutton_add" name="addbooks">
+            
             <div class="messageerror">
                         <?php
                             if (isset($erreur))

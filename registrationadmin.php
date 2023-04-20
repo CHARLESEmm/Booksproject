@@ -2,7 +2,7 @@
 
 
 
-$conn = new PDO('mysql:host=localhost;dbname=books;charset=utf8','root','',array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
+require_once 'connect.php';
 
 if (isset($_POST['register'])) {
     $admin = $_POST['adminname'];
@@ -13,7 +13,7 @@ if (isset($_POST['register'])) {
 
     if ($adminnamelenght <= 15)
     {
-        $conn -> query ('INSERT INTO admin(adminname,password,photo) VALUES ("'.$admin.'", "'.$password.'","'.$photo.'") ');
+        $conn -> query ('INSERT INTO ec_admin(adminname,password,photo) VALUES ("'.$admin.'", "'.$password.'","'.$photo.'") ');
         $erreur ="votre inscription a bien été enregistré";  
     }
     else

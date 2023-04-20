@@ -5,7 +5,7 @@ require_once 'connect.php';
 $searchResults = null;
 if (isset($_POST['motcle'])) {
     $recherche = $_POST['motcle']; 
-    $selection = "SELECT * FROM `book` WHERE title LIKE '%$recherche%' OR author LIKE '%$recherche%'";
+    $selection = "SELECT * FROM `ec_book` WHERE title LIKE '%$recherche%' OR author LIKE '%$recherche%'";
     $resultat = $conn->query($selection);
     if ($resultat && $resultat->rowCount() > 0) {
         $searchResults = $resultat;
@@ -13,7 +13,7 @@ if (isset($_POST['motcle'])) {
 }
 
 // Affichage des livres
-$sql = "SELECT * FROM book ORDER BY title DESC";
+$sql = "SELECT * FROM ec_book ORDER BY title DESC";
 $allbooks = $conn->query($sql);
 
 ?>

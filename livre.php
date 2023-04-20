@@ -14,7 +14,7 @@
         require_once 'headerlivre.php';
         $error = "";
         $book_id = $_GET['book_id'];
-        $sql = "SELECT * FROM `book` WHERE `book_id` = :book_id";
+        $sql = "SELECT * FROM `ec_book` WHERE `book_id` = :book_id";
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(':book_id', $book_id);
         $stmt->execute();

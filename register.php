@@ -15,10 +15,10 @@ if (isset($_POST['register'])) {
         $usernamelenght = strlen($user);
 
         if ($usernamelenght <= 15) {
-            $TestEmail = $conn ->query('SELECT id FROM users WHERE email = "'.$mail.'"');
+            $TestEmail = $conn ->query('SELECT id FROM ec_users WHERE email = "'.$mail.'"');
                   if ($TestEmail -> rowCount()< 1 )
                  {
-                    $conn -> query ('INSERT INTO users(email,username,password) VALUES ("'.$mail.'", "'.$user.'","'.$password.'") ');
+                    $conn -> query ('INSERT INTO ec_users(email,username,password) VALUES ("'.$mail.'", "'.$user.'","'.$password.'") ');
 
                     $erreur ="votre inscription a bien été enregistré";  
 
