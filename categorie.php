@@ -13,8 +13,17 @@ if (isset($_POST['motcle'])) {
 }
 
 // Affichage des livres
-$sql = "SELECT * FROM ec_book ORDER BY title DESC";
-$allbooks = $conn->query($sql);
+
+
+$sql = "SELECT * FROM ec_book JOIN ec_categorie ON ec_book.id = ec_categorie.book_id WHERE ec_categorie.categorie = 'science-fiction'";
+$categoriebooks = $conn->query($sql);
+
+if ($categoriebooks-> rowCount() < 1)
+{
+ echo "Error";
+}
+
+
 
 ?>
 
@@ -51,7 +60,7 @@ $allbooks = $conn->query($sql);
    
     <?php else: ?>
         </div>
-    <?php foreach ($allbooks as $row): ?>
+    <?php foreach ($categoriebooks as $row): ?>
     <div class="card">
         <div class="image">
             <a href="livre.php?id=<?php echo $row['id']; ?>&image=<?php echo $row['poster']; ?>&title=<?php echo $row['title']; ?>&author=<?php echo $row['author']; ?>&details=<?php echo $row['details']; ?>">
