@@ -13,8 +13,19 @@ if (isset($_POST['motcle'])) {
 }
 
 // Affichage des livres
-$sql = "SELECT * FROM ec_book ORDER BY title DESC";
-$allbooks = $conn->query($sql);
+
+
+$sql = "SELECT * FROM ec_book
+        JOIN ec_categorie ON ec_book.book_id = ec_categorie.book_id
+        WHERE ec_categorie.categorie IN ('roman')";
+$categoriebooks = $conn->query($sql);
+
+if ($categoriebooks->rowCount() < 1) {
+    echo "Error";
+}
+
+
+
 
 ?>
 
@@ -25,7 +36,7 @@ $allbooks = $conn->query($sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Roman</title>
 </head>
 
 <?php  
@@ -51,7 +62,7 @@ $allbooks = $conn->query($sql);
    
     <?php else: ?>
         </div>
-    <?php foreach ($allbooks as $row): ?>
+    <?php foreach ($categoriebooks as $row): ?>
     <div class="card">
         <div class="image">
             <a href="livre.php?book_id=<?php echo $row['book_id']; ?>&image=<?php echo $row['poster']; ?>&title=<?php echo $row['title']; ?>&author=<?php echo $row['author']; ?>&details=<?php echo $row['details']; ?>">

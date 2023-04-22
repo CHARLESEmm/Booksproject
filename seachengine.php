@@ -1,7 +1,7 @@
 <?php
 require_once 'connect.php';
 $sql = "SELECT * FROM ec_book ORDER BY title DESC";
-$allbooks = $conn->query($sql);
+$books = $conn->query($sql);
 
 if (isset($_POST['motcle'])) {
     $recherche = $_POST['motcle']; 

@@ -15,13 +15,15 @@ if (isset($_POST['motcle'])) {
 // Affichage des livres
 
 
-$sql = "SELECT * FROM ec_book JOIN ec_categorie ON ec_book.id = ec_categorie.book_id WHERE ec_categorie.categorie = 'science-fiction'";
+$sql = "SELECT * FROM ec_book
+        JOIN ec_categorie ON ec_book.book_id = ec_categorie.book_id
+        WHERE ec_categorie.categorie IN ('historique')";
 $categoriebooks = $conn->query($sql);
 
-if ($categoriebooks-> rowCount() < 1)
-{
- echo "Error";
+if ($categoriebooks->rowCount() < 1) {
+    echo "Error";
 }
+
 
 
 
@@ -34,7 +36,7 @@ if ($categoriebooks-> rowCount() < 1)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Historique</title>
 </head>
 
 <?php  
@@ -46,7 +48,7 @@ if ($categoriebooks-> rowCount() < 1)
     <?php foreach ($searchResults as $row): ?>
     <div class="card">
         <div class="image">
-            <a href="livre.php?id=<?php echo $row['id']; ?>&image=<?php echo $row['poster']; ?>&title=<?php echo $row['title']; ?>&author=<?php echo $row['author']; ?>&details=<?php echo $row['details']; ?>">
+            <a href="livre.php?book_id=<?php echo $row['book_id']; ?>&image=<?php echo $row['poster']; ?>&title=<?php echo $row['title']; ?>&author=<?php echo $row['author']; ?>&details=<?php echo $row['details']; ?>">
                 <img src="<?php echo $row['poster']; ?>" alt="" srcset="">
             </a>
         </div>
@@ -63,7 +65,7 @@ if ($categoriebooks-> rowCount() < 1)
     <?php foreach ($categoriebooks as $row): ?>
     <div class="card">
         <div class="image">
-            <a href="livre.php?id=<?php echo $row['id']; ?>&image=<?php echo $row['poster']; ?>&title=<?php echo $row['title']; ?>&author=<?php echo $row['author']; ?>&details=<?php echo $row['details']; ?>">
+            <a href="livre.php?book_id=<?php echo $row['book_id']; ?>&image=<?php echo $row['poster']; ?>&title=<?php echo $row['title']; ?>&author=<?php echo $row['author']; ?>&details=<?php echo $row['details']; ?>">
                 <img src="<?php echo $row['poster']; ?>" alt="" srcset="">
             </a>
         </div>
