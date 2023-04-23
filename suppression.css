@@ -18,8 +18,8 @@
 
 .partieLivre
 {
-    width: 90%;
-    height: 700px;
+    width: 94%;
+    height: auto;
    
 }
 
@@ -44,12 +44,12 @@ main {
 }
 
 main .card {
-    max-width: 10%;
+    max-width: 15%;
+    width: 150%;
     flex: 2 2 310px;
     text-align: center;
-    height: 10%;
+    height: 15%;
     margin: 1%;
-    
     padding: 5px;
     box-shadow: 10px 10px 10px rgb(179, 176, 176);
     border-radius: 3%;
@@ -59,6 +59,7 @@ main .card {
 }
 
 main .card .image {
+   
     height: 0;
     padding-top: 100%;
     position: relative;
@@ -70,7 +71,7 @@ main .card .image img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 130%;
+    height: 120%;
     object-fit: contain;
     
 }
@@ -90,7 +91,8 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: darkred;
+    background-color: rgb(167, 64, 64);
+    color: white;
 }
 
 
