@@ -15,14 +15,6 @@ if (isset($_POST['motcle'])) {
 // Affichage des livres
 
 
-$sql = "SELECT * FROM ec_book
-        JOIN ec_categorie ON ec_book.book_id = ec_categorie.book_id
-        WHERE ec_categorie.categorie IN ('roman')";
-$categoriebooks = $conn->query($sql);
-
-if ($categoriebooks->rowCount() < 1) {
-    echo "Error";
-}
 
 $sql = "SELECT * FROM ec_book WHERE categorie = 'Historique'";
 $result = $conn->query($sql);
