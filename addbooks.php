@@ -56,30 +56,20 @@ if (isset($_POST['addbooks'])) {
     }
 
     if ($erreur == NULL) {
-        // Insertion en base de données
-        $stmt = $conn->prepare('INSERT INTO ec_book(title, author, summary, details, price, poster, link) VALUES (?, ?, ?, ?, ?, ?, ?)');
-        $stmt->execute(array($title, $author, $summary, $details, $price, $poster, $link));
-    
-        $book_id = $conn->lastInsertId();
-    
-        if ($book_id > 0) {
-            $stmt = $conn->prepare('INSERT INTO ec_categorie (categorie, book_id) VALUES (?, ?)');
-            foreach((array)$categories as $categorie) {
-                $stmt->execute(array($categorie, $book_id));
-            }
-    
-            $erreur = 'Votre livre a bien été ajouté.';
+        if ($erreur == NULL) {
+            // Insertion en base de données
+            $stmt = $conn->prepare('INSERT INTO ec_book(title, author, summary, details, price, poster, link,categorie) VALUES (?, ?, ?, ?, ?, ?, ?,?)');
+            $stmt->execute(array($title, $author, $summary, $details, $price, $poster, $link,$categories));
+        
+           
         } else {
-            $erreur = 'Formulaire non soumis.';
+            $erreur =  "Erreur lors de l'ajout du livre.";
         }
-    } else {
-        echo "Erreur lors de l'ajout du livre.";
-    }
     
     } else {
-        echo 'Formulaire non soumis.';
+        $erreur = 'Formulaire non soumis.';
     }
-    
+}   
 
 
 
@@ -139,9 +129,9 @@ if (isset($_POST['deconnexion'])) {
             <br>
             <label for="categories">Categories</label>
                 <select name="categories">
-                <option value="science-fiction">Science Fiction</option>
-                <option value="roman">Roman</option>
-                <option value="historique">Historique</option>
+                <option value="Science fiction">Science fiction</option>
+                <option value="Roman">Roman</option>
+                <option value="Historique">Historique</option>
                 </select><br>
             <label for="author">Author</label><br>
             <input type="text" id="sizeinput" name="author"><br>

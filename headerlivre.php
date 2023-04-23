@@ -55,9 +55,9 @@ if (isset($_POST['deconnexion'])) {
             <li>
                 <a href="">Categories</a>
                 <ul>
-                    <li><a href="categories.php" id="tesa">Science fiction</a></li>
-                    <li><a href="#" id="tesa">Roman</a></li>
-                    <li><a href="#" id="tesa">Historique</a></li>
+                    <li><a href="science_fiction.php" id="tesa">Science fiction</a></li>
+                    <li><a href="roman.php" id="tesa">Roman</a></li>
+                    <li><a href="historique.php" id="tesa">Historique</a></li>
                 </ul>
             </li>
             <li><a href="home.php">Livres</a></li>

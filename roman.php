@@ -17,12 +17,17 @@ if (isset($_POST['motcle'])) {
 
 $sql = "SELECT * FROM ec_book
         JOIN ec_categorie ON ec_book.book_id = ec_categorie.book_id
-        WHERE ec_categorie.categorie IN ('science-fiction')";
+        WHERE ec_categorie.categorie IN ('roman')";
 $categoriebooks = $conn->query($sql);
 
 if ($categoriebooks->rowCount() < 1) {
     echo "Error";
 }
+
+$sql = "SELECT * FROM ec_book WHERE categorie = 'roman'";
+$result = $conn->query($sql);
+$result ->execute();
+$roman = $result->fetchAll();
 
 
 
@@ -36,7 +41,7 @@ if ($categoriebooks->rowCount() < 1) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Science-fiction</title>
+    <title>Roman</title>
 </head>
 
 <?php  
@@ -62,7 +67,7 @@ if ($categoriebooks->rowCount() < 1) {
    
     <?php else: ?>
         </div>
-    <?php foreach ($categoriebooks as $row): ?>
+    <?php foreach ($roman as $row): ?>
     <div class="card">
         <div class="image">
             <a href="livre.php?book_id=<?php echo $row['book_id']; ?>&image=<?php echo $row['poster']; ?>&title=<?php echo $row['title']; ?>&author=<?php echo $row['author']; ?>&details=<?php echo $row['details']; ?>">
