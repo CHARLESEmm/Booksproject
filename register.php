@@ -55,7 +55,7 @@ if (isset($_POST['register'])) {
   
     <div class="registerbox">
 
-        <a href="registrationadmin.php">Admin ?</a>
+        
         <div class="box-resgister-sign">
             <button class="bouton-sign_register" id ="button_sign"><a href="login.php">SING</a></button>
             <button class="bouton-sign_register" id ="button_register">REGISTER</button>
@@ -73,7 +73,7 @@ if (isset($_POST['register'])) {
                     <br>
                     <br>
                     <label for=""></label>
-                    <input  type="text" id ="sizeinput" placeholder= "Choose a password" name = "password">
+                    <input  type="password" id ="sizeinput" placeholder= "Choose a password" name = "password">
                     <br>
                     <br>
                         

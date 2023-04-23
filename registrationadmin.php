@@ -57,7 +57,7 @@ if (isset($_POST['register'])) {
                     <br>
                     <br>
                     <label for=""></label>
-                    <input  type="text" id ="sizeinput" placeholder= "Choose a password" name = "password">
+                    <input  type="password" id ="sizeinput" placeholder= "Choose a password" name = "password">
                     <br>
                     <br>
                     <label for=""></label>

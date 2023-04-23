@@ -14,14 +14,10 @@ if (isset($_POST['motcle'])) {
 
 // Affichage des livres
 
-
-
 $sql = "SELECT * FROM ec_book WHERE categorie = 'Historique'";
 $result = $conn->query($sql);
 $result ->execute();
 $roman = $result->fetchAll();
-
-
 
 
 ?>

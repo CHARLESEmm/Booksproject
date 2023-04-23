@@ -92,13 +92,17 @@ button
 {
     
     margin-top: 2%;
-    width: 33%;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
 
+.avatarname p
+{
+    margin-left: 2%;
+}
 .deco
 {
     margin-top: 2%;

@@ -89,7 +89,7 @@ if (isset($error)) {
                     <br>
                     <br>
                     <label for=""></label>
-                    <input  type="text" id ="sizeinput" placeholder= "Password" name = "password">
+                    <input  type="password" id ="sizeinput" placeholder= "Password" name = "password">
                     <br>
                     <br>
 

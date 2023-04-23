@@ -75,12 +75,20 @@ if (isset($_POST['addbooks'])) {
 
 
 session_start();
-if (!isset($_SESSION['id']) || !isset($_SESSION['adminname'])) {
-    echo "";
+if (!isset($_SESSION['id'])) {
+
+    header("Location: login_admin.php");
 }
 
+if (empty($_SESSION['id'])) {
+
+    header("Location: login_admin.php");
+}
+
+
+//protection
 if (isset($_POST['deconnexion'])) {
-    unset($_SESSION['id']);
+    session_destroy();
     header('Location: login_admin.php');
     $erreur = "Vous avez bien été déconnecté de votre session admin";
     exit;
@@ -105,7 +113,7 @@ if (isset($_POST['deconnexion'])) {
             </div>
             <div class="bouton">
                 <div class="gestionarticle"><a href="">Gestion d'articles</a></div>
-                <div class="gestionventes"><a href="">Gestion de ventes</a></div>
+                <div class="gestionventes"><a href="gestionArticles.php">Gestion</a></div>
                 <div class="gestionventes"><a href="home.php">Voir le site</a></div>
                 <div class="boxdeco">
                     <form class="deconect" method="POST">
