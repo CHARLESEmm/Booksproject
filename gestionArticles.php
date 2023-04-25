@@ -61,7 +61,7 @@ $allbooks = $conn->query($sql);
                 <p class="nomproduit"><?php echo $row['title']; ?></p>
                 <form method="post" action="">
                     <input type="hidden" name="book_id" value="<?php echo $row['book_id']; ?>">
-                    <button type="submit" name ="bouttonsup" >Supprimer</button>
+                    <button type="submit" name ="bouttonsup" id ="supprimerBtn">Supprimer</button>
                 </form>
             </div>
         <?php endforeach; ?>

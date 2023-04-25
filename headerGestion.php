@@ -26,6 +26,8 @@ if (isset($_POST['deconnexion'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="gestion.css">
     <title>Document</title>
@@ -33,13 +35,15 @@ if (isset($_POST['deconnexion'])) {
 <body>  
 <header>
     <div class="blockGlobal">
-        <div class="blockContenair">
-            <div class="title"><h1>Espace</h1><small>GESTION</small></div>
-            <div class="search"> 
-                <form action="" method="post">
+    <div class="blockContenair">
+            <div class="title"><h1>Esapce</h1> <small>Gestion</small></div>
+            <div class="search" id = "barrederecherche"> 
+                <form action="" method="post" class="d-flex" role="search">
                     <label for="motcle"></label>
-                    <input type="text" id="motcle" name="motcle" placeholder="Recherche...">
-                    <button type="submit" id="seachBtn" name="Rechercher"><img src="assets/chercher.png" alt=""></button>
+                    <input type="text" id="motcle" class="form-control me-2" name="motcle" placeholder="Recherche...">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+
+
                 </form>
             </div>
             <div class="useravatar">

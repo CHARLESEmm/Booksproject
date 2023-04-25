@@ -54,6 +54,7 @@ header
     justify-content: center;
     align-items: center;
     
+    
 }
 
 input
@@ -80,10 +81,11 @@ button
 {
     margin-right: 5%;
     width: 20%;
-    height: 50px;
+    height: 100px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    
     
 
 }
@@ -97,11 +99,13 @@ button
     align-items: center;
     justify-content: center;
     cursor: pointer;
+   
 }
 
 .avatarname p
 {
     margin-left: 2%;
+    margin-bottom: none;
 }
 .deco
 {
@@ -209,7 +213,10 @@ nav ul li ul li a {
     background-color: rgb(127, 196, 252);
 }
 
-
+.btn btn-outline-success
+{
+    color: #e61717;
+}
 
 
 
@@ -361,6 +368,7 @@ button
     display: flex;
     align-items: center;
     justify-content: center;
+   
   
 
 }
@@ -460,5 +468,8 @@ nav ul li ul li a {
     color: white;
     background-color: rgb(127, 196, 252);
 }
+
+
+
 
 }

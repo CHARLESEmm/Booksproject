@@ -10,6 +10,7 @@
     height: 100vh;
     display: flex;
     margin-top: 2%;
+    
 }
 .contenair
 {
@@ -88,6 +89,7 @@
     justify-content: center;
     align-items: center;
     margin-right: 1%;
+  
     
     
     
@@ -128,7 +130,138 @@ summary
     color: white;
 }
 
+@media screen and (max-width: 769px)
+{
 
+.box
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    
+}
+
+.contenair
+{
+    width: 95%;
+    height: auto;
+   /*border: 1px solid red;*/
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+    
+    
+   
+}
+
+.image
+{
+    width: 95%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+
+.image img 
+{
+    width: 100%;
+    margin-left: 2%;
+    height: 98%;
+    
+}
+
+.boxinfo
+{
+    width: 80%;
+    height: 10%; 
+    /*border: 1px solid green;*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5%;
+    
+}
+
+button
+{
+    margin-left: 30%;
+}
+
+.readme
+{
+    width: 100%;
+    height: auto;
+    /*border: 1px solid yellow;;*/
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+.summ
+{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+    margin-left: 2%;
+   
+    
+    
+    
+}
+
+.titre
+{
+    font-size: 20px;
+   margin-bottom: 3%;
+   font-style: bold;
+}
+
+p 
+{
+    font-size: 8px;
+}
+
+.fleche
+{
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    
+}
+
+.fleche img
+{
+    width: 100%;
+    cursor: pointer;
+   
+}
+
+summary
+{
+    color: white;
+}
+
+
+}
 
 
 
