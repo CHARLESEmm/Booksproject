@@ -15,7 +15,7 @@
     <section class="pesentation_section">
         <div class="principal">
             <div class="contenu">
-                <h1>BOOK'S</h1>
+                <img src="assets/books.png" alt="">
                 <div class="bouttonlogin">
                     <a href="register.php"><h3>LOGIN</h3></a>
                 </div>

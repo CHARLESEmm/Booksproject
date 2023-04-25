@@ -57,7 +57,7 @@ if (isset($_POST['register'])) {
 
         
         <div class="box-resgister-sign">
-            <button class="bouton-sign_register" id ="button_sign"><a href="login.php">SING</a></button>
+            <button class="bouton-sign_register" id ="button_sign"><a href="login.php">LOGIN</a></button>
             <button class="bouton-sign_register" id ="button_register">REGISTER</button>
         </div>
         <div class="registercountent">

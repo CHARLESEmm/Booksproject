@@ -15,7 +15,8 @@ body {
 .principal {
     width: 60%;
     height: 60%;
-    background-image: url(assets/bookscover.png);
+    background-image: url(assets/fondpresentation.png);
+  
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -29,6 +30,11 @@ a
 }
 .contenu {
     text-align: center;
+}
+
+.contenu img
+{
+    width:50% ;
 }
 
 h1 {

@@ -35,7 +35,7 @@ if (isset($_POST['deconnexion'])) {
     <div class="blockGlobal">
         <div class="blockContenair">
             <div class="title"><h1>BOOK'S</h1></div>
-            <div class="search"> 
+            <div class="search" id = "barrederecherche"> 
                 <form action="" method="post">
                     <label for="motcle"></label>
                     <input type="text" id="motcle" name="motcle" placeholder="Recherche...">

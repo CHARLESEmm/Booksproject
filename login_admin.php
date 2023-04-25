@@ -76,7 +76,7 @@ if (isset($error)) {
     <div class="registerbox">
       
         <div class="box-resgister-sign">
-            <button class="bouton-sign_register" id ="button_sign"><a href="login_admin.php">SING</a></button>
+            <button class="bouton-sign_register" id ="button_sign"><a href="login_admin.php">LOGIN</a></button>
             <button class="bouton-sign_register" id ="button_register"><a href="registrationadmin.php">REGISTER</a></button>
         </div>
         <div class="registercountent">
@@ -89,7 +89,8 @@ if (isset($error)) {
                     <br>
                     <br>
                     <label for=""></label>
-                    <input  type="password" id ="sizeinput" placeholder= "Password" name = "password">
+                    <label for=""></label>
+                    <input  type="password" id ="sizeinput" placeholder= "password" name = "password">
                     <br>
                     <br>
 

@@ -27,7 +27,7 @@ if (isset($_POST['deconnexion'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="gestion.css">
     <title>Document</title>
 </head>
 <body>  
@@ -39,7 +39,7 @@ if (isset($_POST['deconnexion'])) {
                 <form action="" method="post">
                     <label for="motcle"></label>
                     <input type="text" id="motcle" name="motcle" placeholder="Recherche...">
-                    <button type="submit" name="Rechercher"><img src="assets/chercher.png" alt=""></button>
+                    <button type="submit" id="seachBtn" name="Rechercher"><img src="assets/chercher.png" alt=""></button>
                 </form>
             </div>
             <div class="useravatar">

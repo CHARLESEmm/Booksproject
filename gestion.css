@@ -15,24 +15,71 @@
 
 .blockContenair
 {
- width: 60%;
+ width: 100%;
  height: 50px;
  display: flex;
- justify-content: end;
+ justify-content: start;
 
+
+}
+
+.blockContenair .title
+{
+    justify-content: start;
 }
 
 
 .title
 {
     margin-left: 5%;
-    width: 50%;
+    width: 70%;
     height: 50px;
     display: flex;
     justify-content: start;
     align-items: center;
     margin-top: 5px;
   
+}
+
+.search
+{
+    width: 30%;
+    height:50px ;
+    display: flex;
+    align-items: center;
+    
+}
+
+.useravatar
+{
+    width: 50%;
+    height: 50px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.avatarname
+{
+    width: auto;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.avatarname p
+{
+    margin-top: 1%;
+}
+
+
+#seachBtn
+{
+    width: 5%;
+    height: 20px;
+    background-color: white;
+    
 }
 
 .useravatar

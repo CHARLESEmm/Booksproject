@@ -2,8 +2,9 @@
     padding: 0;
     margin: 0;
     
-    
 }
+
+
 
 main {
     
@@ -21,12 +22,12 @@ main .card {
     max-width: 200px;
     flex: 2 2 310px;
     text-align: center;
-    height: 260px;
     margin: 1%;
-    
     padding: 5px;
     box-shadow: 10px 10px 10px rgb(179, 176, 176);
     border-radius: 3%;
+    border-left: 1px solid rgba(48, 47, 47, 0.2);
+    border-top: 1px solid rgba(48, 47, 47, 0.21);
     
 
     
@@ -65,3 +66,66 @@ main .card .nomproduit {
     margin-top: 2%;
 }
 
+@media screen and (max-width: 769px)
+{
+    main {
+    
+        width: 94%;
+        
+        display: flex;
+        height: auto;
+        gap: 3%;
+        margin-bottom: 15%;
+        
+        
+    }
+    
+    main .card {
+        max-width: 80px;
+        flex: 2 2 310px;
+        text-align: center;
+        margin: 1%;
+        box-shadow: 10px 10px 10px rgb(179, 176, 176);
+        border-radius: 3%;
+    }
+    
+    main .card .image {
+        height: 0;
+        padding-top: 100%;
+        position: relative;
+        
+    }
+    
+    main .card .image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: contain;
+        
+    }
+    
+    
+    main .card .nomproduit {
+        color: black;
+        margin-top: 38%;
+    }
+
+    .nomproduit
+    {
+        font-size: 5%;
+    }
+    
+    
+    .message
+    {
+        width: 300px;
+        height: 500px;
+        color: rgb(45, 131, 230);
+        margin-left: 2%;
+        margin-top: 2%;
+    }
+    
+     
+
+}
