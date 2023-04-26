@@ -34,7 +34,7 @@ $roman = $result->fetchAll();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roman</title>
+    <title>Catégorie : Roman</title>
 </head>
 
 <?php  

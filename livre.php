@@ -26,6 +26,7 @@
             $image = $row['poster'];
             $title = $row['title'];
             $author = $row['author'];
+            $categorie=$row['categorie'];
             $link = $row['link'];
         } else {
             $error =  "An error occurred";
@@ -63,6 +64,7 @@
                         </summary>
                         <p><?php echo $details; ?>.</p>
                         <small><p>Author: <?php echo $author; ?></p></small>
+                        <small><p>Categorie : <?php echo $categorie; ?> </p></small>
                     </details>
                 </div>
                 <div class="messageerror">
@@ -86,3 +88,5 @@
     ?>
 </body>
 </html>
+
+

@@ -125,6 +125,11 @@
    
 }
 
+small
+{
+    color: rgba(97, 95, 95, 0.363);
+}
+
 summary
 {
     color: white;

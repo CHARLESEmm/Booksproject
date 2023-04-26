@@ -101,6 +101,8 @@ if (isset($_POST['deconnexion'])) {
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="addbooks.css">
     <title>Add books</title>
@@ -123,20 +125,32 @@ if (isset($_POST['deconnexion'])) {
             </div>
         </div>
         <div class="formulaire">
-            <div class="boxcontenairadminprofil">
+           
+            <div class="formbox">
+
+            <div class="titre">
+                <h2>Gestion d'articles</h2>
+                <a href="gestionArticles.php" id = "voirlesite" >Gestion</a>
+                <a href="home.php" id = "voirlesite">Voir le site</a>
+                <br>
+                
+                
+                    <form class="deconnec" method="POST">
+                        <button type="submit" name="deconnexion">Déconnexion</button>
+                    </form>
+               
+                <div class="boxcontenairadminprofil">
                 <div class="image_admin"><img src="assets/avatar.png" alt="" srcset=""></div>
                 <div class="adminname"><a href="addbooks.php"><?php echo isset($_SESSION['adminname']) ? $_SESSION['adminname'] : ''; ?></a></div>
             </div>
-            <div class="titre">
-                <h2>Gestion d'articles</h2>
+            
             </div>
-            <div class="formbox">
         <form action="" method="post" class="gestionarticlesform" enctype="multipart/form-data">
             <label for="title">Title</label><br>
             <input type="text" id="sizeinput" name="title">
             <br>
-            <label for="categories">Categories</label>
-                <select name="categories">
+            <label for="categories" >Categories</label>
+                <select name="categories" id="sizeinput" >
                 <option value="Science fiction">Science fiction</option>
                 <option value="Roman">Roman</option>
                 <option value="Historique">Historique</option>
@@ -144,9 +158,9 @@ if (isset($_POST['deconnexion'])) {
             <label for="author">Author</label><br>
             <input type="text" id="sizeinput" name="author"><br>
             <label for="summary">Summary</label><br>
-            <textarea id="story" name="summary" rows="10" cols="33"></textarea><br>
+            <textarea id="story" id="sizeinput" name="summary" rows="3" cols="33" style = border-raduis="5px"></textarea><br>
             <label for="summary">Details</label><br>
-            <textarea id="story" name="details" rows="8" cols="33"></textarea><br><br>   
+            <textarea id="story" name="details" rows="2" cols="33"></textarea><br><br>   
             <label for="price">Price</label><br>
             <input type="text" id="sizeinput" name="price"><br>
             <label for="posteradd">Poster</label><br>

@@ -23,20 +23,22 @@ header
 
 .blockContenair
 {
- width: 60%;
+ width: 95%;
  height: 100px;
  display: flex;
  justify-content: end;
+ 
 }
 
 .title
 {
-    width: 33%;
+    width: 40%;
     height: 100px;
     display: flex;
     justify-content: start;
     align-items: center;
-  
+   
+   margin-right: 10%;
 
 }
 
@@ -53,6 +55,7 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 15%;
     
     
 }
