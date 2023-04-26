@@ -35,37 +35,46 @@ if (isset($_POST['register'])) {
   <link rel="stylesheet" href="inscription.css">
   <title>Register ADMIN</title>
 </head>
-<body>
-  <section class="resgister">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-  <div class="title">
-            <h2>YOUR REGISTRATION ADMIN</h2>
-    </div>
-    
-  
-    <div class="registerbox">
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>Book's<br> Register Page</h2>
+            <p>register from here to access.</p>
+         </div>
+         
+      </div>
+      <div class="main">
       
-        <div class="box-resgister-sign">
-            <button class="bouton-sign_register" id ="button_sign"> <a href="login_admin.php">SING</a></button>
-            <button class="bouton-sign_register" id ="button_register"><a href="registrationadmin.php">REGISTER</a></button>
-        </div>
-        <div class="registercountent">
-               
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+          
             <form method="POST">
-                    
-                    <input type="text" id ="sizeinput" placeholder= "admin name" name ="adminname">
-                    <br>
-                    <br>
-                    <label for=""></label>
-                    <input  type="password" id ="sizeinput" placeholder= "Choose a password" name = "password">
-                    <br>
-                    <br>
-                    <label for=""></label>
-                    <input  type="file" id ="bouttonregisterregistrationupload" placeholder= "add photo" name = "photo"> 
-                    <br>   
-                    <input type="submit" id="bouttonregisterregistration"name ="register" value="GO!">
-                    
-                    <div class="messageerror">
+                  <div class="form-group">
+
+                     <label for=""></label>
+                    <input  type="text" class="form-control" placeholder= "name"name ="adminname">
+                  </div>
+                  
+                  <div class="form-group">
+                  <label>Password</label>
+                     <input type="password" class="form-control"  name = "password" placeholder="Password">
+                     
+                    </div>
+
+                 <div class="form-group">
+                 <label for=""></label>
+                    <input  type="file" class="form-control" placeholder= "add photo" name = "photo"> 
+                 </div>
+                  
+
+                  <button type="submit" class="btn btn-black" name ="sing"><a href="login_admin.php">Login</a></button>
+                  <button type="submit" class="btn btn-secondary" name ="register"> Register</button>
+                  
+                  <div class="messageerror">
                         <?php
                             if(isset($_POST['register']) AND isset($erreur))
                             {
@@ -76,17 +85,8 @@ if (isset($_POST['register'])) {
                           
                         ?>
                     </div>
-                    
-                    
-            </form>
-            
-        </div>
-       
-    
-    </div>
-    
-    
-   
-  </section>
-</body>
+               </form>
+            </div>
+         </div>
+      </div>
 </html>

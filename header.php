@@ -37,14 +37,7 @@ if (isset($_POST['deconnexion'])) {
     <div class="blockGlobal">
         <div class="blockContenair">
             <div class="title"><h1>BOOK'S</h1></div>
-            <div class="search" id = "barrederecherche"> 
-                <form action="" method="post" class="d-flex" role="search">
-                    <label for="motcle"></label>
-                    <input type="text" id="motcle" class="form-control me-2" name="motcle" placeholder="Recherche...">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-
-
-                </form>
+            
             </div>
             <div class="useravatar">
                 <img src="assets/avatar.png" alt="" srcset="">
@@ -62,20 +55,48 @@ if (isset($_POST['deconnexion'])) {
         </div>
     </div>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="">Categories</a>
-                <ul>
-                    <li><a href="science_fiction.php" id="tesa">Science fiction</a></li>
-                    <li><a href="roman.php" id="tesa">Roman</a></li>
-                    <li><a href="historique.php" id="tesa">Historique</a></li>
-                </ul>
-            </li>
-            <li><a href="home.php">Livres</a></li>
+    
+ 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorie
+          </a>
+          <ul class="dropdown-menu">
+
+          
+                    <li><a class="dropdown-item" href="science_fiction.php" id="tesa">Science fiction</a></li>
+                    <li><a class="dropdown-item" href="roman.php" id="tesa">Roman</a></li>
+                    <li><a  class="dropdown-item" href="historique.php" id="tesa">Historique</a></li>
+                
             
-        </ul>
-    </nav>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="home.php">Livres</a>
+        </li>
+      </ul>
+      <form action="" method="post" class="d-flex" role="search">
+                    <label for="motcle"></label>
+                    <input type="text" id="motcle" class="form-control me-2" name="motcle" placeholder="Recherche...">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+     </form>
+    </div>
+  </div>
+</nav>
+
+    
+
+  
 </header>
 </body>
 </html>

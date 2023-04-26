@@ -11,6 +11,7 @@ header
 {
     width: 100%;
    
+   
 }
 
 .blockGlobal
@@ -18,7 +19,8 @@ header
     width: 100%;
     height: 110px;
     display: flex;
-    justify-content: end;
+    justify-content: start;
+    margin-left: 2%;
 }
 
 .blockContenair
@@ -26,19 +28,19 @@ header
  width: 95%;
  height: 100px;
  display: flex;
- justify-content: end;
+ justify-content: space-between;
  
 }
 
 .title
 {
-    width: 40%;
+    width: 50%;
     height: 100px;
     display: flex;
     justify-content: start;
     align-items: center;
    
-   margin-right: 10%;
+   margin-right: 15%;
 
 }
 
@@ -82,12 +84,13 @@ button
 
 .useravatar
 {
-    margin-right: 5%;
+    margin-right: 6%;
     width: 20%;
     height: 100px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    justify-content: space-between;
     
     
 
@@ -102,13 +105,20 @@ button
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  
    
+}
+
+.nav-link dropdown-toggle
+{
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .avatarname p
 {
-    margin-left: 2%;
-    margin-bottom: none;
+    
+    margin-top: 45%;
 }
 .deco
 {
@@ -222,7 +232,17 @@ nav ul li ul li a {
 }
 
 
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: #fff !important;
 
+}
+
+.d-flex {
+    display: flex!important;
+    margin-right: 5%;
+    
+}
 
 
 
@@ -357,13 +377,16 @@ button
     align-items: center;
     justify-content: center;
     cursor: pointer;
+   
 }
 
 .avatarname p
 {
     margin-left: 2%;
     font-size: 8px;
+    margin-top: 50%;
 }
+
 .deco
 {
     margin-top: 2%;
@@ -470,6 +493,20 @@ nav ul li ul li a {
 {
     color: white;
     background-color: rgb(127, 196, 252);
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl
+{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: end;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: #fff !important;
+
 }
 
 

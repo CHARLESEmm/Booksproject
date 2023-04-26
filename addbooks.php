@@ -173,6 +173,8 @@ if (isset($_POST['deconnexion'])) {
             if (isset($erreur)) {
                 echo '<font color="orange">' .$erreur."</font>";
                 exit();
+
+
             }
             ?>
             </div>
@@ -183,3 +185,4 @@ if (isset($_POST['deconnexion'])) {
 </div>
 </body>
 </html>
+

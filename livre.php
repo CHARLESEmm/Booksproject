@@ -12,7 +12,7 @@
 <body>
 <?php 
         require_once 'connect.php';
-        require_once 'headerlivre.php';
+        require_once 'header.php';
         $error = "";
         $book_id = $_GET['book_id'];
         $sql = "SELECT * FROM `ec_book` WHERE `book_id` = :book_id";

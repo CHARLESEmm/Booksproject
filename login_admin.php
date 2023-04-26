@@ -63,41 +63,36 @@ if (isset($error)) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="inscription.css">
-  <title>login_admin</title>
+  <title>login admin</title>
 </head>
-<body>
-  <section class="resgister">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-  <div class="title">
-            <h2>ADMIN</h2>
-    </div>
-    
-  
-    <div class="registerbox">
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>Book's<br> Login Page</h2>
+            <p>Login from here to access.</p>
+         </div>
       
-        <div class="box-resgister-sign">
-            <button class="bouton-sign_register" id ="button_sign"><a href="login_admin.php">LOGIN</a></button>
-            <button class="bouton-sign_register" id ="button_register"><a href="registrationadmin.php">REGISTER</a></button>
-        </div>
-        <div class="registercountent">
-            
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
             <form method="POST">
-                
-                   
-                    <label for=""></label>
-                    <input type="text" id ="sizeinput" placeholder= "Your admin name" name ="admin">
-                    <br>
-                    <br>
-                    <label for=""></label>
-                    <label for=""></label>
-                    <input  type="password" id ="sizeinput" placeholder= "password" name = "password">
-                    <br>
-                    <br>
+                  <div class="form-group">
+                     <label>Admin Name</label>
+                     <input type="text" class="form-control" name ="admin" placeholder="Admin Name">
+                  </div>
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" class="form-control" name = "password" placeholder="Password">
+                  </div>
 
-                        
-                    <input type="submit" id="bouttonregister"name ="sing" value="GO!">
-                    
-                    <div class="messageerror">
+                  <button type="submit" class="btn btn-black" name ="sing">Login</button>
+                  <button type="submit" class="btn btn-secondary"><a href="registrationadmin.php"> Register</a></button>
+                  <div class="messageerror">
                         <?php
                             if(isset($_POST['sing']) AND isset($erreur))
                             {
@@ -108,18 +103,7 @@ if (isset($error)) {
                           
                         ?>
                     </div>
-                    
-                    
-                    
-            </form>
-            
-        </div>
-       
-    
-    </div>
-    
-    
-   
-  </section>
-</body>
-</html>
+               </form>
+            </div>
+         </div>
+      </div>

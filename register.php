@@ -20,7 +20,8 @@ if (isset($_POST['register'])) {
                  {
                     $conn -> query ('INSERT INTO ec_users(email,username,password) VALUES ("'.$mail.'", "'.$user.'","'.$password.'") ');
 
-                    $erreur ="votre inscription a bien été enregistré";  
+                            $erreur="votre inscription a bien été enregistré";  
+                            
 
                         }
                         else
@@ -45,41 +46,47 @@ if (isset($_POST['register'])) {
   <link rel="stylesheet" href="inscription.css">
   <title>Register</title>
 </head>
-<body>
-  <section class="resgister">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-  <div class="title">
-            <h2>YOUR REGISTRATION IS REQUIRED</h2>
-    </div>
-    
-  
-    <div class="registerbox">
-
-        
-        <div class="box-resgister-sign">
-            <button class="bouton-sign_register" id ="button_sign"><a href="login.php">LOGIN</a></button>
-            <button class="bouton-sign_register" id ="button_register">REGISTER</button>
-        </div>
-        <div class="registercountent">
-            
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>Book's<br> Register Page</h2>
+            <p>register from here to access.</p>
+         </div>
+         
+      </div>
+      <div class="main">
+      
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+          
             <form method="POST">
-                
-                    <label for=""></label>
-                    <input  type="text" id ="sizeinput" placeholder= "Enter your email address"name="mail">
-                    <br>
-                    <br>
-                    <label for=""></label>
-                    <input type="text" id ="sizeinput" placeholder= "Choose your username" name ="user">
-                    <br>
-                    <br>
-                    <label for=""></label>
-                    <input  type="password" id ="sizeinput" placeholder= "Choose a password" name = "password">
-                    <br>
-                    <br>
-                        
-                    <input type="submit" id="bouttonregister"name ="register" value="GO!">
-                    
-                    <div class="messageerror">
+                  <div class="form-group">
+
+                     <label for="">Email</label>
+                    <input  type="text" class="form-control" placeholder= "Enter your email address"name="mail">
+                  </div>
+                  <div class="form-group">
+
+                  <label for="">Username</label>
+                    <input type="text" class="form-control" placeholder= "Choose your username" name ="user">
+                  </div>
+
+                  <div class="form-group">
+                  <label>Password</label>
+                     <input type="password" class="form-control" name = "password" placeholder="Password">
+                     
+
+                    </div>
+                  
+
+                  <button type="submit" class="btn btn-black" name ="sing"><a href="login.php">Login</a></button>
+                  <button type="submit" class="btn btn-secondary" name ="register"> Register</button>
+                  
+                  <div class="messageerror">
                         <?php
                             if(isset($_POST['register']) AND isset($erreur))
                             {
@@ -90,20 +97,10 @@ if (isset($_POST['register'])) {
                           
                         ?>
                     </div>
-                    
-                    
-                    
-            </form>
-            
-        </div>
-       
-    
-    </div>
-    
-    
-   
-  </section>
-</body>
+               </form>
+            </div>
+         </div>
+      </div>
 </html>
 
 

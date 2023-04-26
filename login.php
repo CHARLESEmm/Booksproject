@@ -46,11 +46,6 @@ if (isset($error)) {
 ?>
 
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,39 +55,35 @@ if (isset($error)) {
   <link rel="stylesheet" href="inscription.css">
   <title>Login</title>
 </head>
-<body>
-  <section class="resgister">
 
-  <div class="title">
-            <h2>LOGIN</h2>
-    </div>
-    
-  
-    <div class="registerbox">
-        
-        <div class="box-resgister-sign">
-            <button class="bouton-sign_register" id ="button_sign"><a href="login.php">LOGIN</a></button>
-            <button class="bouton-sign_register" id ="button_register"><a href="register.php">REGISTER</a></button>
-            <button class="bouton-sign_register" id ="button_register"><a href="login_admin.php">ADMIN</a></button>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-        </div>
-        <div class="registercountent">
-            
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>Book's<br> Login Page</h2>
+            <p>Login from here to access.</p>
+         </div>
+      
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
             <form method="POST">
-                
-                   
-                    <label for=""></label>
-                    <input type="text" id ="sizeinput" placeholder= "Choose your username" name ="user">
-                    <br>
-                    <br>
-                    <label for=""></label>
-                    <input  type="password" id ="sizeinput" placeholder= "Choose a password" name = "password">
-                    <br>
-                    <br>
-                        
-                    <input type="submit" id="bouttonregister"name ="sing" value="GO!">
-                    
-                    <div class="messageerror">
+                  <div class="form-group">
+                     <label>User Name</label>
+                     <input type="text" class="form-control" name ="user" placeholder="User Name">
+                  </div>
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" class="form-control" name = "password" placeholder="Password">
+                  </div>
+
+                  <button type="submit" class="btn btn-black" name ="sing">Login</button>
+                  <button type="submit" class="btn btn-secondary"><a href="register.php"> Register</a></button>
+                  <div class="messageerror">
                         <?php
                             if(isset($_POST['sing']) AND isset($erreur))
                             {
@@ -103,18 +94,7 @@ if (isset($error)) {
                           
                         ?>
                     </div>
-                    
-                    
-                    
-            </form>
-            
-        </div>
-       
-    
-    </div>
-    
-    
-   
-  </section>
-</body>
-</html>
+               </form>
+            </div>
+         </div>
+      </div>
