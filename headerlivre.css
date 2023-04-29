@@ -62,19 +62,21 @@ a
 .avatarname
 {
     
-    margin-top: 2%;
+    
     width: auto;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    height: 50px;
+    border: 1px solid red;
 }
 
 .avatarname p
 {
-    margin-left: 2%;
-    margin-top: 50%;
+    margin-left: 1%;
+    margin-top: 20%;
+    
 }
 
 .deco

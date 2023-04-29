@@ -6,7 +6,7 @@ require_once 'connect.php';
 $erreur = '';
 
 
-      
+
 
 if (isset($_POST['addbooks'])) {
 
@@ -75,6 +75,17 @@ if (isset($_POST['addbooks'])) {
 
 
 session_start();
+$sql = "SELECT * FROM ec_admin ORDER BY id DESC";
+$info = $conn->query($sql);
+if ($info->rowCount() > 0)
+{
+    $admin = $info->fetch(PDO::FETCH_ASSOC);
+    $photo = $admin['photo'];
+    
+}
+
+
+
 if (!isset($_SESSION['id'])) {
 
     header("Location: login_admin.php");
@@ -140,7 +151,7 @@ if (isset($_POST['deconnexion'])) {
                     </form>
                
                 <div class="boxcontenairadminprofil">
-                <div class="image_admin"><img src="assets/avatar.png" alt="" srcset=""></div>
+                <div class="image_admin"><img src="<?php echo $photo ?>" alt="" srcset=""></div>
                 <div class="adminname"><a href="addbooks.php"><?php echo isset($_SESSION['adminname']) ? $_SESSION['adminname'] : ''; ?></a></div>
             </div>
             

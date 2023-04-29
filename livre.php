@@ -13,6 +13,7 @@
 <?php 
         require_once 'connect.php';
         require_once 'header.php';
+        require_once 'seachengine.php';
         $error = "";
         $book_id = $_GET['book_id'];
         $sql = "SELECT * FROM `ec_book` WHERE `book_id` = :book_id";
@@ -34,6 +35,7 @@
 
        
 ?>
+
 
 
 

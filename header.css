@@ -14,9 +14,8 @@ header
    
 }
 
-.blockGlobal
-{
-    width: 100%;
+.blockGlobal {
+    width: 90%;
     height: 110px;
     display: flex;
     justify-content: start;
@@ -25,10 +24,13 @@ header
 
 .blockContenair
 {
- width: 95%;
+ width: 90%;
  height: 100px;
  display: flex;
  justify-content: space-between;
+ margin-left: 5%;
+ margin-right: 5%;
+
  
 }
 
@@ -44,10 +46,21 @@ header
 
 }
 
-.title h1
+
+
+.navbar-expand-lg .navbar-collapse
 {
-    font-size: 75px;
-    color: rgb(26, 137, 241);
+    
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.title img
+{
+    width: 25%;
+    height: 100%;
+    
 }
 
 .search
@@ -98,15 +111,20 @@ button
 
 .avatarname
 {
-    
-    margin-top: 2%;
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  
-   
+    height: 50px;
+    
+}
+
+.avatarname p
+{
+    margin-left: 1%;
+    margin-top: 20%;
+    
 }
 
 .nav-link dropdown-toggle
@@ -115,11 +133,7 @@ button
     margin-right: 5%;
 }
 
-.avatarname p
-{
-    
-    margin-top: 45%;
-}
+
 .deco
 {
     margin-top: 2%;
@@ -301,11 +315,11 @@ header
 
 }
 
-.title h1
+.title img
 {
-    font-size: 15px;
-    color: rgb(26, 137, 241);
-    margin-left: 5%;
+    width: 100%;
+  
+    
 }
 
 .search
@@ -371,22 +385,22 @@ button
 .avatarname
 {
     
-    margin-top: 2%;
+    
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-   
+    height: 50px;
+    padding: 1%;
 }
 
 .avatarname p
 {
-    margin-left: 2%;
-    font-size: 8px;
-    margin-top: 50%;
+    margin-left: 1%;
+    margin-top: 20%;
+    
 }
-
 .deco
 {
     margin-top: 2%;

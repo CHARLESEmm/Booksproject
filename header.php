@@ -36,7 +36,7 @@ if (isset($_POST['deconnexion'])) {
 <header>
     <div class="blockGlobal">
         <div class="blockContenair">
-            <div class="title"><h1>BOOK'S</h1></div>
+            <div class="title"><img src="assets/books.png" alt="" srcset=""></div>
             
             </div>
             <div class="useravatar">

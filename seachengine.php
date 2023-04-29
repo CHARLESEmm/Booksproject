@@ -6,7 +6,7 @@ $books = $conn->query($sql);
 if (isset($_POST['motcle'])) {
     $recherche = $_POST['motcle']; 
 
-    $selection = "SELECT * FROM `ec_book` WHERE title LIKE '%$recherche%' OR author LIKE '%$recherche%'";
+    $selection = "SELECT * FROM `ec_book` WHERE title LIKE '%$recherche%' OR author OR categorie LIKE '%$recherche%'";
 
     $resultat = $conn->query($selection);
 
